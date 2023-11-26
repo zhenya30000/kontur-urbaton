@@ -1,0 +1,24 @@
+# Используем базовый образ Node.js
+FROM node:latest
+
+# Устанавливаем рабочую директорию внутри контейнера
+WORKDIR /usr/src/app
+
+# Копируем package.json и package-lock.json (или yarn.lock) в рабочую директорию
+COPY package*.json ./
+
+# Устанавливаем зависимости
+RUN npm install
+# Или если используете Yarn:
+# RUN yarn
+
+# Копируем все файлы из текущей директории в рабочую директорию контейнера
+COPY /server .
+
+# Открываем порт, на котором будет работать Express сервер
+EXPOSE 3001
+
+# Команда для запуска сервера Express
+CMD ["npm", "start"]
+# Или если используете Yarn:
+# CMD ["yarn", "start"]
