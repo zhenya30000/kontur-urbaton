@@ -7,13 +7,14 @@ git clone git@github.com:zhenya30000/kontur-urbaton.git
 ```
 2. Установите зависимости отдельно для папки server и папки client
 
+Для установки зависимостей проекта портебуется пакетный менеджеры Node - npm. 
+Если он не установлен:
 ```
-cd server
-npm ci
+sudo apt install npm 
 ```
 
+Если установлен, то сразу:
 ```
-cd client
 npm ci
 ```
 
