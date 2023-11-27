@@ -7,7 +7,6 @@ const sendImage = async (imageFile, neuralSettings) => {
 
   const formData = new FormData();
   formData.append('file', imageFile, imageFile.name);
-  /*   formData.append('objectD', imageFile, imageFile.name); */
   formData.append('classes', JSON.stringify(neuralSettings));
 
   try {
