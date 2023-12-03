@@ -1,29 +1,16 @@
-version: "2"
+version: "3"
 services:
-  nginx-react:
-    container_name: ngixreactapp
+  frontend:
+    depends_on: 
+      - backend
     build:
       context: .
-      dockerfile: Dockerfile
     ports:
       - 3000:3000
+      - 3001:3001
     environment:
       NODE_ENV: production
   
-  model-api:
+  backend:
     build:
       context: ../urbaton
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    volumes:
-      - ../urbaton
-
-  express:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "3001:3001"
-    volumes:
-      - ../server

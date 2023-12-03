@@ -2,7 +2,6 @@ import { Box, Card } from "@mui/material";
 import Header from '../../components/Header'
 import ImageUpload from "../../components/ImageUpload";
 import ImageComparisonSlider from "../../components/ImageComparisonSlider";
-import MultiSliderComponent from '../../components/MultiSliderComponent'
 import { useState } from "react";
 import { tokens } from '../../theme';
 import { useTheme, CircularProgress } from '@mui/material';

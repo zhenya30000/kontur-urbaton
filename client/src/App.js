@@ -5,7 +5,6 @@ import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
 import Main from './scenes/main';
 import History from './scenes/history';
-import Help from './scenes/help';
 
 function App() {
   const [theme, colorMode] = useMode();
